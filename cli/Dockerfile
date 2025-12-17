@@ -30,7 +30,7 @@ LABEL org.opencontainers.image.documentation="https://github.com/1r0n3d3v3l0per/
 LABEL org.opencontainers.image.source="https://github.com/1r0n3d3v3l0per/apertodns"
 LABEL org.opencontainers.image.vendor="ApertoDNS"
 LABEL org.opencontainers.image.licenses="MIT"
-LABEL org.opencontainers.image.version="1.2.5"
+LABEL org.opencontainers.image.version="2.0.0"
 
 # -----------------------------------------------------------------------------
 # SECURITY FIX: Update npm to patch CVE vulnerabilities
