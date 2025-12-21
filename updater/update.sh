@@ -1,6 +1,6 @@
 #!/bin/sh
 # ============================================================================
-# ApertoDNS Updater - DDNS Update Daemon
+# ApertoDNS Updater - DDNS Update Daemon v2.0.0
 # ============================================================================
 # Pure POSIX shell script for minimal Docker image size
 # No bash, Node.js, or Python required
@@ -57,6 +57,7 @@ https://ifconfig.co
 # ============================================================================
 # Logging Functions
 # Uses ANSI color codes for terminal output
+# IMPORTANT: All log output goes to stderr (>&2) to avoid polluting stdout
 # ============================================================================
 
 # Color definitions
@@ -69,6 +70,7 @@ NC='\033[0m'  # No Color (reset)
 
 # Main logging function
 # Arguments: $1=level, $2=message
+# CRITICAL: Output to stderr (>&2) to avoid polluting stdout for subshells
 log() {
     local level="$1"
     local message="$2"
@@ -89,8 +91,8 @@ log() {
         return
     fi
 
-    # Output formatted log line
-    printf "${color}[%s] [%s]${NC} %s\n" "$timestamp" "$level" "$message"
+    # Output formatted log line to STDERR
+    printf "${color}[%s] [%s]${NC} %s\n" "$timestamp" "$level" "$message" >&2
 }
 
 # ============================================================================
@@ -102,7 +104,7 @@ validate_config() {
     # TOKEN is required for API authentication
     if [ -z "$TOKEN" ]; then
         log "ERROR" "TOKEN environment variable is required"
-        log "ERROR" "Get your token from: https://www.apertodns.com/dashboard"
+        log "ERROR" "Get your token from: https://www.apertodns.com/tokens"
         exit 1
     fi
 
@@ -228,13 +230,13 @@ parse_response() {
         badauth)
             # Error: Authentication failed
             log "ERROR" "[$domain] Authentication failed - check your TOKEN"
-            log "ERROR" "Get a new token from: https://www.apertodns.com/dashboard"
+            log "ERROR" "Get a new token from: https://www.apertodns.com/tokens"
             return 1
             ;;
         nohost)
             # Error: Hostname not found in user's account
             log "ERROR" "[$domain] Domain not found - check your DOMAINS configuration"
-            log "ERROR" "Create the domain at: https://www.apertodns.com/dashboard"
+            log "ERROR" "Create the domain at: https://www.apertodns.com/domains"
             return 1
             ;;
         notfqdn)
@@ -418,7 +420,7 @@ trap shutdown_handler SIGTERM SIGINT
 main() {
     # Print startup banner
     log "INFO" "=========================================="
-    log "INFO" "  ApertoDNS Updater v1.0.0"
+    log "INFO" "  ApertoDNS Updater v2.0.0"
     log "INFO" "  https://www.apertodns.com"
     log "INFO" "=========================================="
 
