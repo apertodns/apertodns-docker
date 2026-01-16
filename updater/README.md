@@ -457,7 +457,7 @@ All architectures are available via the `latest` tag with automatic platform sel
 
 ```bash
 # Clone the repository
-git clone https://github.com/1r0n3d3v3l0per/apertodns-docker.git
+git clone https://github.com/apertodns/apertodns-docker.git
 cd apertodns-docker/updater
 
 # Build for current platform
@@ -477,9 +477,9 @@ docker buildx build \
 - [ApertoDNS Website](https://www.apertodns.com)
 - [Documentation](https://www.apertodns.com/docs)
 - [Docker Hub](https://hub.docker.com/r/apertodns/updater)
-- [GitHub Container Registry](https://ghcr.io/1r0n3d3v3l0per/updater)
-- [GitHub](https://github.com/1r0n3d3v3l0per/apertodns-docker)
-- [Report Issues](https://github.com/1r0n3d3v3l0per/apertodns-docker/issues)
+- [GitHub Container Registry](https://ghcr.io/apertodns/updater)
+- [GitHub](https://github.com/apertodns/apertodns-docker)
+- [Report Issues](https://github.com/apertodns/apertodns-docker/issues)
 
 ---
 

@@ -4,7 +4,7 @@ Official Docker images for [ApertoDNS](https://apertodns.com) - Free Dynamic DNS
 
 [![Docker Hub - Updater](https://img.shields.io/docker/v/apertodns/updater?label=updater&logo=docker)](https://hub.docker.com/r/apertodns/updater)
 [![Docker Hub - CLI](https://img.shields.io/docker/v/apertodns/cli?label=cli&logo=docker)](https://hub.docker.com/r/apertodns/cli)
-[![License](https://img.shields.io/github/license/1r0n3d3v3l0per/apertodns-docker)](LICENSE)
+[![License](https://img.shields.io/github/license/apertodns/apertodns-docker)](LICENSE)
 
 ## Available Images
 
@@ -68,8 +68,8 @@ docker pull apertodns/updater:latest
 docker pull apertodns/cli:latest
 
 # GitHub Container Registry
-docker pull ghcr.io/1r0n3d3v3l0per/apertodns-updater:latest
-docker pull ghcr.io/1r0n3d3v3l0per/apertodns-cli:latest
+docker pull ghcr.io/apertodns/apertodns-updater:latest
+docker pull ghcr.io/apertodns/apertodns-cli:latest
 ```
 
 ## Platform Support
@@ -90,11 +90,11 @@ docker pull ghcr.io/1r0n3d3v3l0per/apertodns-cli:latest
 - **Website**: [apertodns.com](https://apertodns.com)
 - **Dashboard**: [apertodns.com/dashboard](https://apertodns.com/dashboard)
 - **CLI on npm**: [npmjs.com/package/apertodns](https://npmjs.com/package/apertodns)
-- **CLI on GitHub**: [github.com/1r0n3d3v3l0per/apertodns](https://github.com/1r0n3d3v3l0per/apertodns)
+- **CLI on GitHub**: [github.com/apertodns/apertodns](https://github.com/apertodns/apertodns)
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/1r0n3d3v3l0per/apertodns-docker/issues)
+- **Issues**: [GitHub Issues](https://github.com/apertodns/apertodns-docker/issues)
 - **Email**: support@apertodns.com
 
 ## License

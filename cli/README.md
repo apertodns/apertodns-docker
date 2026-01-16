@@ -223,7 +223,7 @@ All architectures are available via the `latest` tag with automatic platform sel
 
 ```bash
 # Clone the repository
-git clone https://github.com/1r0n3d3v3l0per/apertodns-docker.git
+git clone https://github.com/apertodns/apertodns-docker.git
 cd apertodns-docker/cli
 
 # Build for current platform
@@ -286,5 +286,5 @@ MIT License - see [LICENSE](LICENSE) for details.
 - [CLI Documentation](https://www.apertodns.com/docs)
 - [npm Package](https://www.npmjs.com/package/apertodns)
 - [Docker Hub](https://hub.docker.com/r/apertodns/cli)
-- [GitHub Container Registry](https://ghcr.io/1r0n3d3v3l0per/cli)
-- [GitHub](https://github.com/1r0n3d3v3l0per/apertodns-docker)
+- [GitHub Container Registry](https://ghcr.io/apertodns/cli)
+- [GitHub](https://github.com/apertodns/apertodns-docker)
