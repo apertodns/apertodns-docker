@@ -11,7 +11,7 @@
 #   - API key authentication for stateless operations
 #   - All CLI commands available (--setup, --domains, --force, --update, etc.)
 #
-# Repository: https://github.com/1r0n3d3v3l0per/apertodns
+# Repository: https://github.com/apertodns/apertodns
 # Docker Hub: https://hub.docker.com/r/apertodns/cli
 # ============================================================================
 
@@ -26,8 +26,8 @@ LABEL maintainer="ApertoDNS <support@apertodns.com>"
 LABEL org.opencontainers.image.title="ApertoDNS CLI"
 LABEL org.opencontainers.image.description="Official ApertoDNS CLI tool in a Docker container"
 LABEL org.opencontainers.image.url="https://www.apertodns.com"
-LABEL org.opencontainers.image.documentation="https://github.com/1r0n3d3v3l0per/apertodns"
-LABEL org.opencontainers.image.source="https://github.com/1r0n3d3v3l0per/apertodns"
+LABEL org.opencontainers.image.documentation="https://github.com/apertodns/apertodns"
+LABEL org.opencontainers.image.source="https://github.com/apertodns/apertodns"
 LABEL org.opencontainers.image.vendor="ApertoDNS"
 LABEL org.opencontainers.image.licenses="MIT"
 LABEL org.opencontainers.image.version="2.0.2"

@@ -10,7 +10,7 @@
 #   - Smart updates: Only sends requests when IP actually changes
 #   - DynDNS2 compatible: Works with standard protocol responses
 #
-# Repository: https://github.com/1r0n3d3v3l0per/apertodns-docker
+# Repository: https://github.com/apertodns/apertodns-docker
 # Docker Hub: https://hub.docker.com/r/apertodns/updater
 # ============================================================================
 
@@ -25,8 +25,8 @@ LABEL maintainer="ApertoDNS <support@apertodns.com>"
 LABEL org.opencontainers.image.title="ApertoDNS Updater"
 LABEL org.opencontainers.image.description="Lightweight DDNS updater daemon for ApertoDNS"
 LABEL org.opencontainers.image.url="https://www.apertodns.com"
-LABEL org.opencontainers.image.documentation="https://github.com/1r0n3d3v3l0per/apertodns-docker"
-LABEL org.opencontainers.image.source="https://github.com/1r0n3d3v3l0per/apertodns-docker"
+LABEL org.opencontainers.image.documentation="https://github.com/apertodns/apertodns-docker"
+LABEL org.opencontainers.image.source="https://github.com/apertodns/apertodns-docker"
 LABEL org.opencontainers.image.vendor="ApertoDNS"
 LABEL org.opencontainers.image.licenses="MIT"
 LABEL org.opencontainers.image.version="2.0.2"
