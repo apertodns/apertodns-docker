@@ -29,7 +29,7 @@ LABEL org.opencontainers.image.documentation="https://github.com/apertodns/apert
 LABEL org.opencontainers.image.source="https://github.com/apertodns/apertodns-docker"
 LABEL org.opencontainers.image.vendor="ApertoDNS"
 LABEL org.opencontainers.image.licenses="MIT"
-LABEL org.opencontainers.image.version="2.0.2"
+LABEL org.opencontainers.image.version="2.0.3"
 
 # -----------------------------------------------------------------------------
 # Install minimal dependencies
