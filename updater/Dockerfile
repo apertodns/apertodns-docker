@@ -29,7 +29,7 @@ LABEL org.opencontainers.image.documentation="https://github.com/apertodns/apert
 LABEL org.opencontainers.image.source="https://github.com/apertodns/apertodns-docker"
 LABEL org.opencontainers.image.vendor="ApertoDNS"
 LABEL org.opencontainers.image.licenses="MIT"
-LABEL org.opencontainers.image.version="2.0.4"
+LABEL org.opencontainers.image.version="2.0.5"
 
 # -----------------------------------------------------------------------------
 # Install minimal dependencies
@@ -58,7 +58,8 @@ WORKDIR /app
 # Copy update script
 # The script handles all DDNS update logic
 # -----------------------------------------------------------------------------
-COPY --chmod=755 update.sh /app/update.sh
+COPY update.sh /app/update.sh
+RUN chmod 755 /app/update.sh
 
 # -----------------------------------------------------------------------------
 # Create data directory for IP cache

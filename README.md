@@ -44,6 +44,9 @@ docker run --rm -v apertodns_config:/root/.config/apertodns apertodns/cli --doma
 
 # Standalone update (no config required)
 docker run --rm apertodns/cli --update --domain myhost.apertodns.com --token YOUR_TOKEN
+
+# TXT record for ACME DNS-01 (Let's Encrypt)
+docker run --rm -e APERTODNS_API_KEY="your-key" apertodns/cli --txt-set myhost.apertodns.com _acme-challenge "token"
 ```
 
 ## Documentation

@@ -87,6 +87,44 @@ docker run -e APERTODNS_API_KEY=ak_your_api_key_here apertodns/cli --domains
 | `--update` | Standalone DynDNS2 update (with `--domain` and `--token`) |
 | `--json` | Output in JSON format (combine with other commands) |
 | `--help` | Show all available options |
+| `--txt-set` | Set TXT record (ACME DNS-01) |
+| `--txt-delete` | Delete TXT record |
+
+## TXT Records (ACME DNS-01)
+
+Set and delete TXT records for Let's Encrypt DNS-01 certificate challenges:
+
+```bash
+# Set TXT record for certificate validation
+docker run --rm \
+  -e APERTODNS_API_KEY="your-api-key" \
+  apertodns/cli:latest \
+  --txt-set example.apertodns.com _acme-challenge "validation-token"
+
+# Delete TXT record after certificate issuance
+docker run --rm \
+  -e APERTODNS_API_KEY="your-api-key" \
+  apertodns/cli:latest \
+  --txt-delete example.apertodns.com _acme-challenge
+```
+
+### Integration with Certbot
+
+```bash
+# Manual hook for Certbot
+certbot certonly --manual --preferred-challenges dns \
+  --manual-auth-hook 'docker run --rm -e APERTODNS_API_KEY="your-key" apertodns/cli --txt-set $CERTBOT_DOMAIN _acme-challenge "$CERTBOT_VALIDATION"' \
+  --manual-cleanup-hook 'docker run --rm -e APERTODNS_API_KEY="your-key" apertodns/cli --txt-delete $CERTBOT_DOMAIN _acme-challenge' \
+  -d example.apertodns.com
+```
+
+### Integration with acme.sh
+
+```bash
+# Using DNS API mode
+export APERTODNS_API_KEY="your-api-key"
+acme.sh --issue --dns dns_apertodns -d example.apertodns.com
+```
 
 ## Docker Compose
 

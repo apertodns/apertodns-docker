@@ -10,6 +10,7 @@
 #   - Persistent config support via volume mount
 #   - API key authentication for stateless operations
 #   - All CLI commands available (--setup, --domains, --force, --update, etc.)
+#   - TXT record support for ACME DNS-01 challenges (--txt-set, --txt-delete)
 #
 # Repository: https://github.com/apertodns/apertodns
 # Docker Hub: https://hub.docker.com/r/apertodns/cli
@@ -30,7 +31,7 @@ LABEL org.opencontainers.image.documentation="https://github.com/apertodns/apert
 LABEL org.opencontainers.image.source="https://github.com/apertodns/apertodns"
 LABEL org.opencontainers.image.vendor="ApertoDNS"
 LABEL org.opencontainers.image.licenses="MIT"
-LABEL org.opencontainers.image.version="2.0.4"
+LABEL org.opencontainers.image.version="2.0.5"
 
 # -----------------------------------------------------------------------------
 # SECURITY FIX: Update npm to patch CVE vulnerabilities
