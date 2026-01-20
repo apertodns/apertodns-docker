@@ -297,9 +297,9 @@ update_domain() {
     log "DEBUG" "Updating $domain via: $url"
 
     # Make API request with Basic Auth
-    # Authentication: TOKEN as both username and password
+    # Authentication: hostname as username, TOKEN as password
     local response=$(curl -s --connect-timeout 10 --max-time 30 \
-        -u "${TOKEN}:${TOKEN}" \
+        -u "${domain}:${TOKEN}" \
         "$url" 2>/dev/null)
 
     # Handle empty response (network error)
