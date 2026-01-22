@@ -21,7 +21,7 @@
 FROM alpine:3.19
 
 # Metadata labels following OCI specification
-LABEL maintainer="ApertoDNS <support@apertodns.com>"
+LABEL maintainer="Andrea Ferro <support@apertodns.com>"
 LABEL org.opencontainers.image.title="ApertoDNS Updater"
 LABEL org.opencontainers.image.description="Lightweight DDNS updater daemon for ApertoDNS"
 LABEL org.opencontainers.image.url="https://www.apertodns.com"
@@ -29,7 +29,7 @@ LABEL org.opencontainers.image.documentation="https://github.com/apertodns/apert
 LABEL org.opencontainers.image.source="https://github.com/apertodns/apertodns-docker"
 LABEL org.opencontainers.image.vendor="ApertoDNS"
 LABEL org.opencontainers.image.licenses="MIT"
-LABEL org.opencontainers.image.version="2.0.7"
+LABEL org.opencontainers.image.version="2.1.0"
 
 # -----------------------------------------------------------------------------
 # Install minimal dependencies

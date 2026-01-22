@@ -23,7 +23,7 @@
 FROM node:22-alpine
 
 # Metadata labels following OCI specification
-LABEL maintainer="ApertoDNS <support@apertodns.com>"
+LABEL maintainer="Andrea Ferro <support@apertodns.com>"
 LABEL org.opencontainers.image.title="ApertoDNS CLI"
 LABEL org.opencontainers.image.description="Official ApertoDNS CLI tool in a Docker container"
 LABEL org.opencontainers.image.url="https://www.apertodns.com"
@@ -31,7 +31,7 @@ LABEL org.opencontainers.image.documentation="https://github.com/apertodns/apert
 LABEL org.opencontainers.image.source="https://github.com/apertodns/apertodns"
 LABEL org.opencontainers.image.vendor="ApertoDNS"
 LABEL org.opencontainers.image.licenses="MIT"
-LABEL org.opencontainers.image.version="2.0.7"
+LABEL org.opencontainers.image.version="2.1.0"
 
 # -----------------------------------------------------------------------------
 # SECURITY FIX: Update npm to patch CVE vulnerabilities
